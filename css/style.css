@@ -81,6 +81,7 @@ input {
   text-shadow: 3px 3px 3px black;
   margin-left: 5vw;
   margin-right: 5vw;
+  margin-bottom: 0;
 }
 
 .weather {
@@ -92,7 +93,7 @@ button.convert {
   text-shadow: 2px 2px 2px black;
   padding: 12px;
   margin-right: 5vw;
-  margin-top: 1rem;
+  margin-top: 2rem;
   color: yellow;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.6);
@@ -234,6 +235,7 @@ footer {
   .temp2,
   .humidity {
     font-size: 3rem;
+    width: 90vw;
   }
   .weather,
   .humidity {
@@ -410,6 +412,19 @@ footer {
     color: yellow;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
