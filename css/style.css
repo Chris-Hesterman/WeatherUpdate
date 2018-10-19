@@ -1,9 +1,11 @@
-html {
+/* html {
   position: relative;
   min-height: 100%;
-}
+} */
 
 body {
+  margin-top: 0;
+  margin-bottom: 0;
   color: yellow;
   background: #4b6cb7; /* fallback for old browsers */
   background: -webkit-linear-gradient(to bottom, #4b6cb7, #182848); /* Chrome 10-25, Safari 5.1-6 */
@@ -412,6 +414,20 @@ footer {
     color: yellow;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
