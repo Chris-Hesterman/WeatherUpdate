@@ -49,6 +49,7 @@ $(document).ready(function() {
         width: "40vw",
         padding: "2px 0 2px 1rem"
       }, 300, function() {
+        $("input#cityName").show();
         $(this).focus();
       });
      }
