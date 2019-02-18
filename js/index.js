@@ -22,10 +22,10 @@ $(document).ready(function() {
   //GET LOCATION DATA
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      lats = position.coords.latitude;
-      long = position.coords.longitude;
+      lats = position.coords.latitude.toFixed(1);
+      long = position.coords.longitude.toFixed(1);
       
-      getData(lats, long);
+      getData(parseFloat(lats), parseFloat(long));
       
       $(".convert").click(function() {
           $(".temp,.temp2").toggle();
