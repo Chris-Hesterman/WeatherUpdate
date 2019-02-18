@@ -18,6 +18,7 @@ $(document).ready(function() {
   
  //PREPARE FOR DISPLAY
  $("button.convert").hide();
+ $("input#cityName").hide();
  
   //GET LOCATION DATA
   if (navigator.geolocation) {
@@ -40,6 +41,7 @@ $(document).ready(function() {
         width: "80vw",
         padding: "5px 0 5px 1rem"
       }, 300, function() {
+        $("input#cityName").show();
         $(this).focus();
       });
      } else {
