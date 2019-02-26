@@ -96,6 +96,7 @@ button.convert {
   cursor: pointer;
   font-size: 2rem;
   margin-right: 5vw;
+  margin-left: 5vw;
   margin-top: 2rem;
   padding: 12px;
   text-shadow: 2px 2px 2px black;
