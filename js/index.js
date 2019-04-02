@@ -26,11 +26,7 @@ $(document).ready(function() {
       lats = position.coords.latitude.toFixed(1);
       long = position.coords.longitude.toFixed(1);
       
-      getData(parseFloat(lats), parseFloat(long));
-      
-      $(".convert").click(function() {
-          $(".temp,.temp2").toggle();
-        });   
+      getData(parseFloat(lats), parseFloat(long));   
     });
   }
   
@@ -108,6 +104,11 @@ $(document).ready(function() {
     $(".temp").text("Temperature: " + tempCe);
     $(".temp2").text("Temperature: " + tempFa);
     $(".temp").hide();
+    $(".temp2").show()
+    $(".convert").off('click');
+    $(".convert").click(function() {
+      $(".temp,.temp2").toggle();
+    });
     $(".humidity").text("Relative Humidity: " + myJSON.main.humidity + "%");
         
     visualize(myJSON);
