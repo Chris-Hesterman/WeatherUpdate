@@ -113,15 +113,12 @@ button.convert {
 }
 
 button.convert:active {
+  background-color: black;
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transform: translate(3px, 3px);
       -ms-transform: translate(3px, 3px);
           transform: translate(3px, 3px);
-}
-
-button.convert:hover {
-  background-color: black;
 }
 
 button.convert:focus {
