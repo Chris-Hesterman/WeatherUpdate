@@ -9,7 +9,9 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -38,11 +40,9 @@ body {
           flex-direction: column;
 }
 .start {
-  background: #4b6cb7; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #4b6cb7, #182848); /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(#4b6cb7), to(#182848));
-  background: -webkit-linear-gradient(top, #4b6cb7, #182848);
+  background: #4b6cb7; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: -o-linear-gradient(top, #4b6cb7, #182848);
+  background: -webkit-gradient(linear, left top, left bottom, from(#4b6cb7), to(#182848));
   background: linear-gradient(to bottom, #4b6cb7, #182848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -193,6 +193,11 @@ input::-ms-input-placeholder {
   opacity: .6;
 }
 
+input::-moz-placeholder {
+  color: yellow;
+  opacity: .6;
+}
+
 input::placeholder {
   color: yellow;
   opacity: .6;
@@ -220,7 +225,7 @@ footer {
 
 @media (min-width: 1600px) {
   .city {
-    font-size: 7rem;
+    font-size: 6rem;
   }
   button.convert {
     font-size: 3.75rem;
@@ -232,7 +237,7 @@ footer {
     font-size: 3.75rem;
   }
   img.svg {
-    height: 300px;
+    height: 250px;
   }
 }
 
