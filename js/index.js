@@ -60,7 +60,7 @@ $(document).ready(function() {
         name = encodeURI($('#cityName').val());
         $(".backImg").animate({opacity: 0}, 500);
         if($(window).width() < 851) {
-          $("input").fadeOut(500).blur().fadeIn(500);
+          $("input").blur();
         }
         $('#cityName').val('');
         $.getJSON(`https://api.opencagedata.com/geocode/v1/json?q=${name}&key=6a03bc76226b406fb1510bfd9994df6a&pretty=1`).done(function(myJSON) {
@@ -178,6 +178,8 @@ $(document).ready(function() {
       } 
       $(".info").fadeIn(700);
       $(".backImg").animate({opacity: 1},1000);
-      $("input").focus();
+      if ($("window").width > 850) {
+        $("input").focus();
+      } 
     }  
   });
