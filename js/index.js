@@ -60,6 +60,7 @@ $(document).ready(function() {
         name = encodeURI($('#cityName').val());
         $(".backImg").animate({opacity: 0}, 500);
         if($(window).width() < 851) {
+          console.log('enter');
           $("input #cityName").blur();
         }
         $('#cityName').val('');
