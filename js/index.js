@@ -184,6 +184,9 @@ $(document).ready(function() {
           $(".city").after(snow);
           break;
       } 
+      if ($(window).width < 851) {
+        $(window).scrollTo(0, 1);
+      }
       $(".info").fadeIn(700);
       $(".backImg").animate({opacity: 1},1000);
       if ($(window).width() > 850) {
