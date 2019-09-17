@@ -184,8 +184,10 @@ $(document).ready(function() {
           $(".city").after(snow);
           break;
       } 
-      if ($(window).width < 851) {
-        $(window).scrollTo(0, 1);
+      if (placeName.length > 18) {
+        $("header").css({ "flex-direction": "column", "align-items": "center" });
+        $(".city").css({ "margin-bottom": 0 });
+
       }
       $(".info").fadeIn(700);
       $(".backImg").animate({opacity: 1},1000);
