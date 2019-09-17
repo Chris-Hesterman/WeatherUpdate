@@ -67,7 +67,10 @@ $(document).ready(function() {
             $(".icon").fadeIn(500);
           },500);
         }
-        $('#cityName').val('');
+        setTimeout(function() {
+          $('#cityName').val('');
+        }, 500);
+      
         $.getJSON(`https://api.opencagedata.com/geocode/v1/json?q=${name}&key=6a03bc76226b406fb1510bfd9994df6a&pretty=1`).done(function(myJSON) {
           lat = myJSON.results[0].geometry.lat.toFixed(2);
           lon = myJSON.results[0].geometry.lng.toFixed(2);
