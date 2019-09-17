@@ -64,6 +64,7 @@ $(document).ready(function() {
           $(this).blur();
           $(this).fadeOut(500);
           setTimeout(function() {
+            $(window).scrollTo(0, 0)
             $(".icon").fadeIn(500);
           },500);
         }
