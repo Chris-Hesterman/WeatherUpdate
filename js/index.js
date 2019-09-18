@@ -190,6 +190,7 @@ $(document).ready(function() {
 
       }
       setTimeout(function() {
+        $(window).scrollTo(0, 40);
         $(window).scrollTo(0, 1);
       }, 0);
       $(".info").fadeIn(700);
