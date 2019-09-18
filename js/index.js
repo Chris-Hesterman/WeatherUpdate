@@ -77,7 +77,7 @@ $(document).ready(function() {
           name = myJSON.results[0].components.city;
           stateCode = myJSON.results[0].components.state_code;
           country = myJSON.results[0].components.country_code;
-
+    
           getData(lat, lon);
         }); 
       } 
@@ -189,14 +189,12 @@ $(document).ready(function() {
         $(".city").css({ "margin-bottom": 0 });
 
       }
-      setTimeout(function() {
-        $(window).scrollTo(0, 40);
-        $(window).scrollTo(0, 1);
-      }, 0);
+      
       $(".info").fadeIn(700);
       $(".backImg").animate({opacity: 1},1000);
       if ($(window).width() > 850) {
         $("input").focus();
       }
+      $("html").scrollTop(0);
     }  
   });
