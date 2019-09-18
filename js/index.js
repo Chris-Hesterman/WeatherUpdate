@@ -38,11 +38,11 @@ $(document).ready(function() {
     $(".icon").on('click', function() {
       $(this).fadeOut(300);
       if($(window).width() < 851) {
+        $("html").scrollTop(window.innerHeight)
         $("input").delay(500).animate({
           width: "80vw",
           padding: "5px 0 5px 1rem"
         }, 300, function() {
-          console.log(this);
           $(this).focus();
         });
        } else {
