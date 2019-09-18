@@ -189,6 +189,9 @@ $(document).ready(function() {
         $(".city").css({ "margin-bottom": 0 });
 
       }
+      setTimeout(function() {
+        $(window).scrollTo(0, 1);
+      }, 0);
       $(".info").fadeIn(700);
       $(".backImg").animate({opacity: 1},1000);
       if ($(window).width() > 850) {
