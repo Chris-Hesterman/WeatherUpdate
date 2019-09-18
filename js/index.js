@@ -72,13 +72,21 @@ $(document).ready(function() {
         }, 500);
       
         $.getJSON(`https://api.opencagedata.com/geocode/v1/json?q=${name}&key=6a03bc76226b406fb1510bfd9994df6a&pretty=1`).done(function(myJSON) {
-          lat = myJSON.results[0].geometry.lat.toFixed(2);
-          lon = myJSON.results[0].geometry.lng.toFixed(2);
-          name = myJSON.results[0].components.city;
-          stateCode = myJSON.results[0].components.state_code;
-          country = myJSON.results[0].components.country_code;
-    
-          getData(lat, lon);
+          if (myJSON.results.length === 0) {
+            alert('Please check spelling');
+            $()
+            setTimeout(function() {
+              getData(lat, lon);
+            },1000);
+          } else {
+            lat = myJSON.results[0].geometry.lat.toFixed(2);
+            lon = myJSON.results[0].geometry.lng.toFixed(2);
+            name = myJSON.results[0].components.city;
+            stateCode = myJSON.results[0].components.state_code;
+            country = myJSON.results[0].components.country_code;
+          
+            getData(lat, lon);
+          } 
         }); 
       } 
     });
