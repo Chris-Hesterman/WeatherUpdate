@@ -37,20 +37,16 @@ $(document).ready(function() {
       getInitialStateInfo(lat, lon);  
     });
     
-    $(".icon").on('click', function() {
+    $(".icon").on('click', function(e) {
+      e.preventDefault();
       $(this).fadeOut(300);
-      if($(window).width() < 851) {
-        
-        
-       //am I targeting right element?
+      if($(window).width() < 851) {   
         $("input").delay(500).animate({
           width: "80vw",
           padding: "5px 0 5px 1rem"
         }, 300, function() {
-          $(this).focus();
-          $(".temp .temp2").animate({
-            scrollTop: 0
-          });
+            $("input#cityName").focus();
+            $(".temp .temp2").scrollTop(0);
         });
        } else {
          $("input").delay(500).animate({
