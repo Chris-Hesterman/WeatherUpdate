@@ -61,7 +61,7 @@ $(document).ready(function() {
     $("#cityName").on('keyup', function(event) {
       if(event.which === 13) {
         name = encodeURI($('#cityName').val());
-        $(".backImg").animate({opacity: 0}, 500);
+        $(".backImg").animate({opacity: 0}, 700);
         if($(window).width() < 851) {
           $(this).blur();
           $(this).fadeOut(500);
