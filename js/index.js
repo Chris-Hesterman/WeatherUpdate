@@ -6,6 +6,7 @@ $(document).ready(function() {
         lon,
         country,
         name,
+        nameBackup,
         placeName,
         tempC,
         tempF,
@@ -61,6 +62,7 @@ $(document).ready(function() {
     //ACCEPT USER INPUT, BLUR() ON MOBILE AFTER RETURN TO GET KEYBOARD OFF SCREEN AGAIN
     $("#cityName").on('keyup', function(event) {
       if(event.which === 13) {
+        nameBackup = name;
         name = encodeURI($('#cityName').val());
         $(".backImg").animate({opacity: 0}, 700);
         if($(window).width() < 851) {
@@ -79,6 +81,7 @@ $(document).ready(function() {
             alert('Please check spelling');
             $()
             setTimeout(function() {
+              name = nameBackup;
               getData(lat, lon);
             },1000);
           } else {
