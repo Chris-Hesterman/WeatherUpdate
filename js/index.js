@@ -27,6 +27,7 @@ $(document).ready(function() {
     $("button.convert").hide();
     $("input#cityName").hide();
     $(".icon").hide();
+    $(".load-error").hide();
     $("html").scrollTop(0);
     
     //GET LOCATION DATA
@@ -76,7 +77,8 @@ $(document).ready(function() {
         }, 500);
         $.getJSON(`https://api.opencagedata.com/geocode/v1/json?q=${name}&key=6a03bc76226b406fb1510bfd9994df6a&pretty=1`).done(function(myJSON) {
           if (myJSON.results.length === 0) {
-            alert('Please check spelling');
+            $(".load").fadeOut(200);
+            $(".load-error").fadeIn(200);
             setTimeout(function() {
               name = nameBackup;
               getData(lat, lon);
@@ -90,7 +92,7 @@ $(document).ready(function() {
           
             getData(lat, lon);
           } 
-        }); 
+        })
       } 
     });
     
@@ -105,14 +107,19 @@ $(document).ready(function() {
         setTimeout(function() {
           $(".icon").fadeIn(500);
         },500);
-
+      
         getData(lat, lon);  
+      })
+      .fail(function() {
+        $(".icon").fadeIn(500);
+        getData(47.63, -122.34);
       });
     }
     
     function getData(lat, lon) {
       $.getJSON(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=44f43fc29ce6e6e51f04621e20830d3b`).done(function(myJSON) { 
-        
+      $(".load-error").fadeOut(300); 
+      console.log(myJSON);
       assignData(myJSON);
       });    
     }
@@ -120,12 +127,12 @@ $(document).ready(function() {
     //ASSIGN WEATHER DATA TO VARIABLES AND TO DOM ELEMENTS
     function assignData(myJSON) {
       tempC = Math.floor(myJSON.main.temp);
-      tempF = Math.floor((tempC * 9/5) +32);
+      tempF = Math.floor((tempC * 9/5) + 32);
       tempCe = tempC + " °C";
       tempFa = tempF + " °F"; 
       
       if (myJSON.sys.country === 'US') {
-        placeName = (name || myJSON.name) + ', ' + stateCode;
+        placeName = (name || myJSON.name) + ', ' + (stateCode || myJSON.sys.country);
       } else {
         placeName = myJSON.name + '-' + country;
       }
@@ -195,10 +202,12 @@ $(document).ready(function() {
           $(".city").after(snow);
           break;
       } 
-      if (placeName.length > 18) {
+      if (placeName.length > 15) {
         $("header").css({ "flex-direction": "column", "align-items": "center" });
         $(".city").css({ "margin-bottom": 0 });
-
+        if ($(window).width() < 549) {
+          $(".city").css({"font-size": "1.75rem"});
+        }
       }
       
       $(".info").fadeIn(700);
