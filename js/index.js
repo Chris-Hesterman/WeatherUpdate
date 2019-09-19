@@ -26,6 +26,7 @@ $(document).ready(function() {
     $("button.convert").hide();
     $("input#cityName").hide();
     $(".icon").hide();
+    $("html").scrollTop(0);
     
     //GET LOCATION DATA
     navigator.geolocation.getCurrentPosition(function(position) {
