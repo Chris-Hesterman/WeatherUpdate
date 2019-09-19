@@ -40,7 +40,7 @@ $(document).ready(function() {
       $(this).fadeOut(300);
       if($(window).width() < 851) {
         
-        $("html body .backImg").scrollTop(window.innerHeight);
+        $("temp temp2").scrollTop(0);
        //am I targeting right element?
         $("input").delay(500).animate({
           width: "80vw",
