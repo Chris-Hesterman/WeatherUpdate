@@ -41,13 +41,16 @@ $(document).ready(function() {
       $(this).fadeOut(300);
       if($(window).width() < 851) {
         
-        $("temp temp2").scrollTop(0);
+        
        //am I targeting right element?
         $("input").delay(500).animate({
           width: "80vw",
           padding: "5px 0 5px 1rem"
         }, 300, function() {
           $(this).focus();
+          $(".temp .temp2").animate({
+            scrollTop: 0
+          });
         });
        } else {
          $("input").delay(500).animate({
@@ -75,11 +78,9 @@ $(document).ready(function() {
         setTimeout(function() {
           $('#cityName').val('');
         }, 500);
-      
         $.getJSON(`https://api.opencagedata.com/geocode/v1/json?q=${name}&key=6a03bc76226b406fb1510bfd9994df6a&pretty=1`).done(function(myJSON) {
           if (myJSON.results.length === 0) {
             alert('Please check spelling');
-            $()
             setTimeout(function() {
               name = nameBackup;
               getData(lat, lon);
