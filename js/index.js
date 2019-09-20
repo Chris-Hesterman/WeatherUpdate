@@ -47,7 +47,7 @@ $(document).ready(function() {
           padding: "5px 0 5px 1rem"
         }, 300, function() {
             $("input#cityName").focus();
-            $(".temp .temp2").scrollTop(0);
+            $("html").scrollTop(500);
         });
        } else {
          $("input").delay(500).animate({
@@ -72,9 +72,9 @@ $(document).ready(function() {
             $(".icon").fadeIn(500);
           },500);
         }
-        setTimeout(function() {
-          $('#cityName').val('');
-        }, 500);
+        
+        $('#cityName').val('');
+        
         $.getJSON(`https://api.opencagedata.com/geocode/v1/json?q=${name}&key=6a03bc76226b406fb1510bfd9994df6a&pretty=1`).done(function(myJSON) {
           if (myJSON.results.length === 0) {
             $(".load").fadeOut(200);
