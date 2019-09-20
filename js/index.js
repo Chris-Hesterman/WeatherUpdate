@@ -39,7 +39,6 @@ $(document).ready(function() {
     });
     
     $(".icon").on('click', function(e) {
-      e.preventDefault();
       $(this).fadeOut(300);
       if($(window).width() < 851) {   
         $("input").delay(500).animate({
@@ -47,8 +46,10 @@ $(document).ready(function() {
           padding: "5px 0 5px 1rem"
         }, 300, function() {
             $("input#cityName").focus();
-            $("html").scrollTop(500);
         });
+        setTimeout(function() {
+          $("html").scrollTop(500);
+        },1000);
        } else {
          $("input").delay(500).animate({
           width: "40vw",
