@@ -294,6 +294,9 @@ footer {
   input {
     font-size: 3rem;
   }
+  body {
+    position: static;
+  }
 }
 
 @media (max-width: 548px) {
