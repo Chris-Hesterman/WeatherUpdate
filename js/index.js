@@ -50,9 +50,6 @@ $(document).ready(function() {
         }, 300, function() {
             $("input#cityName").focus();
         });
-        setTimeout(function() {
-          $("html").scrollTop(500);
-        },1000);
        } else {
          $("input").delay(500).animate({
           width: "40vw",
