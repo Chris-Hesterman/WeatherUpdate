@@ -31,10 +31,9 @@ $(document).ready(function() {
     $("html").scrollTop(0);
     
     //GET LOCATION DATA
-    navigator.geolocation.getCurrentPosition(function(position) {
-      lat = +position.coords.latitude.toFixed(2);
-      lon = +position.coords.longitude.toFixed(2);
-
+    $.getJSON('http://ip-api.com/json/?fields=lat,lon').done(function(myJSON) {
+      lat = myJSON.lat.toFixed(2);
+      lon = myJSON.lon.toFixed(2);
       getInitialStateInfo(lat, lon);  
     });
     
