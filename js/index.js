@@ -31,9 +31,13 @@ $(document).ready(function() {
     $("html").scrollTop(0);
     
     //GET LOCATION DATA
-    $.getJSON('http://ip-api.com/json/?fields=lat,lon').done(function(myJSON) {
-      lat = myJSON.lat.toFixed(2);
-      lon = myJSON.lon.toFixed(2);
+    $.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=b7b2c1f26fed4fb0806c2a5dec8c0ef9&fields=latitude,longitude').done(function(myJSON) {
+      console.log(47.20159.toFixed(2));
+      latitude = +myJSON.latitude;
+      longitude= +myJSON.longitude
+      lat = latitude.toFixed(2);
+      lon = longitude.toFixed(2);
+      console.log(lat,lon);
       getInitialStateInfo(lat, lon);  
     });
     
