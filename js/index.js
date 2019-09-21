@@ -64,7 +64,7 @@ $(document).ready(function() {
       if(event.which === 13) {
         nameBackup = name;
         name = encodeURI($('#cityName').val());
-        $(".backImg").animate({opacity: 0}, 700);
+        $(".backImg").animate({opacity: 0}, 500);
         if($(window).width() < 851) {
           $(this).blur();
           $(this).fadeOut(500);
@@ -126,6 +126,7 @@ $(document).ready(function() {
       
     //ASSIGN WEATHER DATA TO VARIABLES AND TO DOM ELEMENTS
     function assignData(myJSON) {
+      let weatherDescription = myJSON.weather[0].description.substring(0, 23);
       tempC = Math.floor(myJSON.main.temp);
       tempF = Math.floor((tempC * 9/5) + 32);
       tempCe = tempC + " °C";
@@ -139,7 +140,7 @@ $(document).ready(function() {
       $("button.convert").show();
       $(".city").text(placeName);
       $(".city").css("text-decoration" , "underline");
-      $(".weather").text(myJSON.weather[0].main + " (" + myJSON.weather[0].description.substring(0, 23) + ")");
+      $(".weather").html(myJSON.weather[0].main + "<br><span>" + " (" + weatherDescription + "<span>)");
       $(".temp").text("Temperature: " + tempCe);
       $(".temp2").text("Temperature: " + tempFa);
       $(".temp").hide();
@@ -208,6 +209,8 @@ $(document).ready(function() {
         if ($(window).width() < 549) {
           $(".city").css({"font-size": "1.75rem"});
         }
+      } else {
+        $("header").css({ "flex-direction": "row", "align-items": "normal" });
       }
       
       $(".info").fadeIn(700);

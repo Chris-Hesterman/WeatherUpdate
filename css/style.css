@@ -52,6 +52,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -110,6 +111,10 @@ input {
   text-shadow: 3px 3px 3px black;
 }
 
+span {
+  font-size: 2rem;
+  vertical-align: top;
+}
 .weather {
   width: 45vw;
 }
@@ -294,9 +299,6 @@ footer {
   input {
     font-size: 3rem;
   }
-  body {
-    position: static;
-  }
 }
 
 @media (max-width: 548px) {
@@ -316,12 +318,13 @@ footer {
   .city {
     font-size: 2.25rem;
     margin-top: 20px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
     text-align: center;
   }
   
   img.svg {
     height: 75px;
+    margin-top: 10px;
   }
   .weather,
   .temp,
@@ -337,6 +340,9 @@ footer {
   .temp2,
   .humidity {
     margin-top: 10px;
+  }
+  span {
+    font-size: 1.25rem;
   }
   button.convert {
     font-size: 1.5rem;
