@@ -204,6 +204,11 @@ $(document).ready(function() {
           $(".city").after(snow);
           break;
       } 
+      renderWeatherPage();
+    }  
+
+    //make css adjustments if necessary and present results
+    function renderWeatherPage() {
       if (placeName.length > 13) {
         $("header").css({ "flex-direction": "column", "align-items": "center" });
         $(".city").css({ "margin-bottom": "0" });
@@ -213,7 +218,9 @@ $(document).ready(function() {
         }
       } else {
         $("header").css({ "flex-direction": "row", "align-items": "normal" });
-        $(".city").css({ "margin-bottom": "20", "font-size": "2.25rem" });
+        if ($(window).width() < 549) {
+          $(".city").css({ "margin-bottom": "20", "font-size": "2.25rem" });
+        }
         $("img.svg").css({ "margin-top": "10" });
       }
       
@@ -223,7 +230,6 @@ $(document).ready(function() {
       if ($(window).width() > 850) {
         $("input").focus();
       }
-
       $("html").scrollTop(0);
-    }  
+    }
   });
