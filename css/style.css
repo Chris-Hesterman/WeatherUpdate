@@ -2,6 +2,7 @@ html {
   min-height: 100%;
   position: relative;
 }
+
 body {
   min-height: 100%;
   background-repeat: no-repeat;
@@ -41,6 +42,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
 .start {
   background: #4b6cb7; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: -o-linear-gradient(top, #4b6cb7, #182848);
@@ -52,7 +54,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -116,6 +121,7 @@ span {
   font-size: 2rem;
   vertical-align: top;
 }
+
 .weather {
   width: 45vw;
 }
@@ -189,7 +195,6 @@ input::-webkit-input-placeholder {
   color: yellow;
   opacity: .6;
   font-size: 2rem;
-  
 }
 
 input:-ms-input-placeholder {
@@ -308,13 +313,34 @@ footer {
     font-size: .75rem;
   }
 
+  input::-webkit-input-placeholder {
+    font-size: 1.2rem;
+  }
+
+  input::-moz-placeholder {
+    font-size: 1.2rem;
+  }
+
+  input:-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+
+  input::-ms-input-placeholder {
+    font-size: 1.2rem;
+  }
+
   input::placeholder {
     font-size: 1.2rem;
   }
   
   header {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .city {
     font-size: 2.25rem;
