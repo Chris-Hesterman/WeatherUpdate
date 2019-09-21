@@ -204,7 +204,7 @@ $(document).ready(function() {
           $(".city").after(snow);
           break;
       } 
-      if (placeName.length > 15) {
+      if (placeName.length > 13) {
         $("header").css({ "flex-direction": "column", "align-items": "center" });
         $(".city").css({ "margin-bottom": "0" });
         $("img.svg").css({ "margin-top": "0" });
