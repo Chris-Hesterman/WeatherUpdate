@@ -77,6 +77,7 @@ $(document).ready(function() {
         
         $.getJSON(`https://api.opencagedata.com/geocode/v1/json?q=${name}&key=6a03bc76226b406fb1510bfd9994df6a&pretty=1`).done(function(myJSON) {
           if (myJSON.results.length === 0) {
+            $("html").scrollTop(0);
             $(".load").fadeOut(200);
             $(".load-error").fadeIn(200);
             setTimeout(function() {
@@ -205,19 +206,24 @@ $(document).ready(function() {
       } 
       if (placeName.length > 15) {
         $("header").css({ "flex-direction": "column", "align-items": "center" });
-        $(".city").css({ "margin-bottom": 0 });
+        $(".city").css({ "margin-bottom": "0" });
+        $("img.svg").css({ "margin-top": "0" });
         if ($(window).width() < 549) {
           $(".city").css({"font-size": "1.75rem"});
         }
       } else {
         $("header").css({ "flex-direction": "row", "align-items": "normal" });
+        $(".city").css({ "margin-bottom": "20", "font-size": "2.25rem" });
+        $("img.svg").css({ "margin-top": "10" });
       }
       
       $(".info").fadeIn(700);
       $(".backImg").animate({opacity: 1},1000);
+
       if ($(window).width() > 850) {
         $("input").focus();
       }
+
       $("html").scrollTop(0);
     }  
   });
