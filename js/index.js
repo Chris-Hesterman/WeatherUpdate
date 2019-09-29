@@ -141,7 +141,7 @@ $(document).ready(function() {
       $("button.convert").show();
       $(".city").text(placeName);
       $(".city").css("text-decoration" , "underline");
-      $(".weather").html(myJSON.weather[0].main + "<br><span>" + " (" + weatherDescription + "<span>)");
+      $(".weather").html(myJSON.weather[0].main + "<span>" + " (" + weatherDescription + "<span>)");
       $(".temp").text("Temperature: " + tempCe);
       $(".temp2").text("Temperature: " + tempFa);
       $(".temp").hide();

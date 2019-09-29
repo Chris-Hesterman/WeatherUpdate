@@ -1,10 +1,14 @@
 html {
-  min-height: 100%;
+  height: 100%;
   position: relative;
 }
 
 body {
-  min-height: 100%;
+  height: 100%;
+  background: #4b6cb7; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -o-linear-gradient(top, #4b6cb7, #182848);
+  background: -webkit-gradient(linear, left top, left bottom, from(#4b6cb7), to(#182848));
+  background: linear-gradient(to bottom, #4b6cb7, #182848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   color: yellow;
   display: -webkit-box;
@@ -30,7 +34,7 @@ body {
 
 .backImg {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   opacity: 0;
   z-index: 1;
   display: -webkit-box;
@@ -41,13 +45,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.start {
-  background: #4b6cb7; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: -o-linear-gradient(top, #4b6cb7, #182848);
-  background: -webkit-gradient(linear, left top, left bottom, from(#4b6cb7), to(#182848));
-  background: linear-gradient(to bottom, #4b6cb7, #182848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header {
@@ -119,7 +116,6 @@ input {
 
 span {
   font-size: 2rem;
-  vertical-align: top;
 }
 
 .weather {
@@ -167,7 +163,7 @@ button.convert:focus {
 }
 
 .text-field {
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
   margin-top: 40px;
   min-width: 40vw;
   -webkit-box-ordinal-group: 6;
@@ -288,6 +284,9 @@ footer {
   .humidity {
     margin-bottom: 20px;
   }
+  .weather {
+    margin-top: 0;
+  }
   button.convert {
     margin-left: 5vw;
   }
@@ -307,7 +306,7 @@ footer {
   }
 }
 
-@media (max-width: 548px) {
+@media (max-width: 648px) {
   .load,
   .load-error {
     font-size: .75rem;
