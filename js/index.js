@@ -43,7 +43,7 @@ $(document).ready(function() {
     $(".icon").on('click', function(e) {
       $(this).fadeOut(300);
       if($(window).width() < 851) {  
-        $(".weather, .humidity, .temp, .temp2, div.btn").fadeOut(500); 
+        $(".weather, .humidity, .temp, .temp2, div.btn, #credits").fadeOut(500); 
         $("input").delay(500).animate({
           width: "80vw",
           padding: "5px 0 5px 1rem"
@@ -225,7 +225,7 @@ $(document).ready(function() {
         $("img.svg").css({ "margin-top": "10" });
       }
       
-      $(".weather, .humidity, div.btn").fadeIn(700);
+      $(".weather, .humidity, div.btn, #credits").fadeIn(700);
       $(".backImg").animate({opacity: 1},1000);
 
       if ($(window).width() > 850) {
