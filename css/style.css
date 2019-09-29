@@ -44,7 +44,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: fixed;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 header {
