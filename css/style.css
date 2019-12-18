@@ -66,7 +66,7 @@ header {
   opacity: 1;
   margin-top: 60px;
   text-align: center;
-  text-shadow: 3px 3px 3px black;
+  /* text-shadow: -1px -1px 1px #555, 1px -1px 1px #555, -1px 1px 1px #555, 1px 1px 1px #555; */
 }
 
 img.svg {
@@ -592,7 +592,7 @@ header {
   opacity: 1;
   margin-top: 60px;
   text-align: center;
-  text-shadow: 3px 3px 3px black;
+  text-shadow: -1px -1px 1px #555, 1px -1px 1px #555, -1px 1px 1px #555, 3px 3px 3px #000;
 }
 
 img.svg {
@@ -638,7 +638,7 @@ input {
   margin-bottom: 0;
   margin-left: 5vw;
   margin-right: 5vw; 
-  text-shadow: 3px 3px 3px black;
+  text-shadow: -1px -1px 1px #555, 1px -1px 1px #555, -1px 1px 1px #555, 3px 3px 3px #000;
 }
 
 span {
@@ -712,12 +712,14 @@ input {
   color: yellow;
   font-weight: 200;
   width: 0;
+  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 2px 2px 3px #000;
 }
 
 input::-webkit-input-placeholder {
   color: yellow;
   opacity: .6;
   font-size: 2rem;
+  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 2px 2px 3px #000;
 }
 
 input:-ms-input-placeholder {
@@ -761,7 +763,7 @@ footer {
   font-family: "Roboto", sans-serif;
   opacity: .2;
   text-decoration: none;
-  text-shadow: 1px 1px black;
+  text-shadow: 1px 1px  black;
 }
 
 @media (min-width: 1600px) {
