@@ -1,4 +1,3 @@
-
 html {
   height: 100%;
   position: relative;
@@ -8,24 +7,35 @@ body {
   height: 100%;
   background: #4b6cb7; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: -o-linear-gradient(top, #4b6cb7, #182848);
-  background: -webkit-gradient(linear, left top, left bottom, from(#4b6cb7), to(#182848));
-  background: linear-gradient(to bottom, #4b6cb7, #182848); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#4b6cb7),
+    to(#182848)
+  );
+  background: linear-gradient(
+    to bottom,
+    #4b6cb7,
+    #182848
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background-repeat: no-repeat;
   color: yellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0;
+  overflow: hidden;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-.load, 
+.load,
 .load-error {
   position: absolute;
   top: 20px;
@@ -43,8 +53,8 @@ body {
   margin: 0;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   position: center center;
 }
 
@@ -54,11 +64,11 @@ header {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .city {
@@ -67,7 +77,8 @@ header {
   opacity: 1;
   margin-top: 60px;
   text-align: center;
-  text-shadow: -1px -1px 1px #555, 1px -1px 1px #555, -1px 1px 1px #555, 3px 3px 3px #000;
+  text-shadow: -1px -1px 1px #555, 1px -1px 1px #555, -1px 1px 1px #555,
+    3px 3px 3px #000;
 }
 
 img.svg {
@@ -76,13 +87,13 @@ img.svg {
 
 .fogfade {
   -webkit-animation-name: fog;
-          animation-name: fog;
+  animation-name: fog;
   -webkit-animation-duration: 6s;
-          animation-duration: 6s;
+  animation-duration: 6s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 }
 
 .info {
@@ -91,13 +102,13 @@ img.svg {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   position: relative;
 }
 
@@ -107,13 +118,14 @@ img.svg {
 .humidity,
 .icon,
 input {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 2.75rem;
   font-weight: 500;
   margin-bottom: 0;
   margin-left: 5vw;
-  margin-right: 5vw; 
-  text-shadow: -1px -1px 1px #555, 1px -1px 1px #555, -1px 1px 1px #555, 3px 3px 3px #000;
+  margin-right: 5vw;
+  text-shadow: -1px -1px 1px #555, 1px -1px 1px #555, -1px 1px 1px #555,
+    3px 3px 3px #000;
 }
 
 span {
@@ -135,25 +147,26 @@ button.convert {
   margin-left: 5vw;
   margin-top: 2rem;
   padding: 12px;
-  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 2px 2px 3px #000;
+  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000,
+    2px 2px 3px #000;
   -webkit-box-shadow: 3px 3px 3px black;
-          box-shadow: 3px 3px 3px black;
+  box-shadow: 3px 3px 3px black;
   -webkit-animation-name: colorChange;
-          animation-name: colorChange;
+  animation-name: colorChange;
   -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
+  animation-duration: 2.5s;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
 }
 
 button.convert:active {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   -webkit-transform: translate(3px, 3px);
-      -ms-transform: translate(3px, 3px);
-          transform: translate(3px, 3px);
+  -ms-transform: translate(3px, 3px);
+  transform: translate(3px, 3px);
 }
 
 button.convert:hover {
@@ -169,60 +182,66 @@ button.convert:focus {
   margin-top: 40px;
   min-width: 40vw;
   -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
+  -ms-flex-order: 5;
+  order: 5;
 }
 
 .icon {
   cursor: pointer;
   height: 3rem;
   margin-bottom: -10px;
-  width: auto; 
+  width: auto;
 }
 
 input {
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0.6);
   border: none;
   border-radius: 5px;
   color: yellow;
   font-weight: 200;
   width: 0;
-  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 2px 2px 3px #000;
+  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000,
+    2px 2px 3px #000;
 }
 
 input::-webkit-input-placeholder {
   color: yellow;
-  opacity: .6;
+  opacity: 0.6;
   font-size: 2rem;
-  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 2px 2px 3px #000;
+  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000,
+    2px 2px 3px #000;
 }
 
 input:-ms-input-placeholder {
   color: yellow;
-  opacity: .6;
-  font-style: italic;  
-  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 2px 2px 3px #000;
+  opacity: 0.6;
+  font-style: italic;
+  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000,
+    2px 2px 3px #000;
 }
 
 input::-ms-input-placeholder {
   color: yellow;
-  opacity: .6;
+  opacity: 0.6;
   font-style: italic;
-  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 2px 2px 3px #000;
+  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000,
+    2px 2px 3px #000;
 }
 
 input::-moz-placeholder {
   color: yellow;
-  opacity: .6;
+  opacity: 0.6;
   font-style: italic;
-  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 2px 2px 3px #000;
+  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000,
+    2px 2px 3px #000;
 }
 
 input::placeholder {
   color: yellow;
-  opacity: .6;
+  opacity: 0.6;
   font-style: italic;
-  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000, 2px 2px 3px #000;
+  text-shadow: -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000,
+    2px 2px 3px #000;
 }
 
 input:focus {
@@ -239,10 +258,10 @@ footer {
 
 #credits {
   color: yellow;
-  font-family: "Roboto", sans-serif;
-  opacity: .3;
+  font-family: 'Roboto', sans-serif;
+  opacity: 0.3;
   text-decoration: none;
-  text-shadow: 1px 1px  black;
+  text-shadow: 1px 1px black;
 }
 
 @media (min-width: 1600px) {
@@ -276,10 +295,10 @@ footer {
   .info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -ms-flex-wrap: no-wrap;
-        flex-wrap: no-wrap;
+    flex-wrap: no-wrap;
   }
   .weather,
   .temp,
@@ -298,10 +317,12 @@ footer {
   button.convert {
     margin-left: 5vw;
   }
-  .btn, .temp, .temp2 {
-    -webkit-box-ordinal-group:2;
-        -ms-flex-order:1;
-            order:1;
+  .btn,
+  .temp,
+  .temp2 {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
   }
   .text-field {
     margin-top: 70px;
@@ -317,8 +338,8 @@ footer {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-top: 1.2rem;
   }
 }
@@ -326,7 +347,7 @@ footer {
 @media (max-width: 648px) {
   .load,
   .load-error {
-    font-size: .75rem;
+    font-size: 0.75rem;
   }
 
   input::-webkit-input-placeholder {
@@ -348,15 +369,15 @@ footer {
   input::placeholder {
     font-size: 1.2rem;
   }
-  
+
   header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .city {
     font-size: 2.25rem;
@@ -364,7 +385,7 @@ footer {
     margin-bottom: 20px;
     text-align: center;
   }
-  
+
   img.svg {
     height: 75px;
     margin-top: 10px;
@@ -396,12 +417,12 @@ footer {
   }
   .text-field {
     margin-top: 30px;
-}
+  }
   input {
     font-size: 2rem;
   }
 }
-  
+
 @media (max-width: 375px) {
   .weather,
   .temp,
@@ -424,42 +445,42 @@ footer {
 }
 
 .sunny {
-  background: url("https://chris-hesterman.github.io/ch-images//weather/sunny1.jpg");
+  background: url('https://chris-hesterman.github.io/ch-images//weather/sunny1.jpg');
   background-size: cover;
 }
 
 .clearNight {
-  background: url("https://chris-hesterman.github.io/ch-images//weather/clearnight1.jpg");
+  background: url('https://chris-hesterman.github.io/ch-images//weather/clearnight1.jpg');
   background-size: cover;
 }
 
 .cloudy {
-  background: url("https://chris-hesterman.github.io/ch-images//weather/cloudy1.jpg");
+  background: url('https://chris-hesterman.github.io/ch-images//weather/cloudy1.jpg');
   background-size: cover;
 }
 
 .rainy {
-  background: url("https://chris-hesterman.github.io/ch-images//weather/rainy1.jpg");
+  background: url('https://chris-hesterman.github.io/ch-images//weather/rainy1.jpg');
   background-size: cover;
 }
 
 .stormy {
-  background: url("https://chris-hesterman.github.io/ch-images//weather/stormy1.jpg");
+  background: url('https://chris-hesterman.github.io/ch-images//weather/stormy1.jpg');
   background-size: cover;
 }
 
 .foggy {
-  background: url("https://chris-hesterman.github.io/ch-images//weather/foggy1.jpg");
+  background: url('https://chris-hesterman.github.io/ch-images//weather/foggy1.jpg');
   background-size: cover;
 }
 
 .cloudynight {
-  background: url("https://chris-hesterman.github.io/ch-images//weather/cloudyNight1.jpg");
+  background: url('https://chris-hesterman.github.io/ch-images//weather/cloudyNight1.jpg');
   background-size: cover;
 }
 
 .snow {
-  background: url("https://chris-hesterman.github.io/ch-images//weather/snow1.jpg");
+  background: url('https://chris-hesterman.github.io/ch-images//weather/snow1.jpg');
   background-size: cover;
 }
 
@@ -467,17 +488,17 @@ footer {
   0% {
     opacity: 1;
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
   }
   50% {
-    opacity: .4;
+    opacity: 0.4;
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   100% {
     opacity: 1;
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
   }
 }
 
@@ -485,17 +506,17 @@ footer {
   0% {
     opacity: 1;
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
   }
   50% {
-    opacity: .4;
+    opacity: 0.4;
     -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   100% {
     opacity: 1;
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
   }
 }
 
@@ -522,59 +543,3 @@ footer {
     color: yellow;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
